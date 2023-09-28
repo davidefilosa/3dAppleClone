@@ -5,6 +5,8 @@ import SoundSection from "./components/SoundSection";
 import WebgiViewer from "./components/WebgiViewer";
 import Loader from "./components/Loader";
 import { useRef } from "react";
+import { Analytics } from '@vercel/analytics/react';
+
 
 function App() {
   const webgiViwerRef = useRef();
@@ -23,6 +25,8 @@ function App() {
       </div>
 
       <WebgiViewer ref={webgiViwerRef} contentRef={contentRef} />
+              <Analytics />
+
     </div>
   );
 }
